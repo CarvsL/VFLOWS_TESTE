@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    
     function formatCNPJ(value) {
         value = value.replace(/\D/g, '').slice(0, 14);
         return value
