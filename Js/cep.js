@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return cep;
     }
 
+    
     function clearAddressFields() {
         document.getElementById('endereco').value = '';
         document.getElementById('bairro').value = '';
