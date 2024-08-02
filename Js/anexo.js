@@ -49,6 +49,7 @@ function deleteAnexo(anexoId) {
     });
 }
 
+
 function viewAnexo(anexoId) {
     const blobURL = sessionStorage.getItem(anexoId);
     const a = document.createElement('a');
