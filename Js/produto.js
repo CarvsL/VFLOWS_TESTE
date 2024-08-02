@@ -90,3 +90,5 @@ function removeProduct(element) {
 
     productCount--; 
 }
+
+//
