@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 descricaoProduto: product.querySelector(`[id^="produto-nome-"]`)?.value || '',
                 unidadeMedida: product.querySelector(`[id^="produto-unidade-"]`)?.value || '',
                 qtdeEstoque: product.querySelector(`[id^="produto-quantidade-"]`)?.value || 0,
-                valorUnitario: parseFloat(product.querySelector(`[id^="produto-preco-"]`)?.value.replace(',', '.') || 0),
+                valorUnitario: parseFloat(product.querySelector(`[id^="produto-preco-"]`)?.value.replace('R$ ', '').replace('.', '').replace(',', '.') || '0'), 
                 valorTotal: parseFloat(product.querySelector(`[id^="produto-total-"]`)?.value.replace('R$ ', '').replace(',', '.') || 0)
             });
         }
