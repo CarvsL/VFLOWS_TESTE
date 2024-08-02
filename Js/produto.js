@@ -64,17 +64,17 @@ function removeProduct(element) {
     productDiv.remove();
 
     $('#product-list > div').each(function(index) {
-        const newCount = index + 1; // Ajuste o número do produto
-        $(this).find('span').text(`Produto ${newCount}`); // Atualize o texto do span
+        const newCount = index + 1; 
+        $(this).find('span').text(`Produto ${newCount}`); 
 
-        // Atualize os atributos e o texto dos labels corretamente
+        
         $(this).find('label').each(function() {
             const labelFor = $(this).attr('for');
-            const newLabel = labelFor.replace(/\d+$/, newCount); // Substitua o número no ID
+            const newLabel = labelFor.replace(/\d+$/, newCount); 
             $(this).attr('for', newLabel).text($(this).text().replace(/\d+$/, newCount));
         });
 
-        // Atualize os IDs e names dos inputs
+        
         $(this).find('input').each(function() {
             const inputId = $(this).attr('id').replace(/\d+$/, newCount);
             const inputName = $(this).attr('name').replace(/\d+$/, newCount);
@@ -88,5 +88,5 @@ function removeProduct(element) {
         });
     });
 
-    productCount--; // Decrementa o contador de produtos
+    productCount--; 
 }
